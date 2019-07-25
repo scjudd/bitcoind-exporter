@@ -6,7 +6,6 @@ class BitcoinRpcExporter:
         self.rpc_client = rpc_client
         self.metrics = metrics
         self.interval_seconds = 1
-        self.backoff_triggered = False
 
     def run_once(self):
         blockhash = self.rpc_client.call('getbestblockhash')
